@@ -1,0 +1,4 @@
+1) Make the 9 squares
+2) Detect user clicking the squares
+3) Alternating turns(X then O)
+4) Determine winner
