@@ -27,15 +27,15 @@ function draw() {
 
     if(userTurn == 'X'){
       fill(255,0,0)
-      text("X: " + xScore, 500, 90);
+      text("X Wins: " + xScore, 500, 90);
       fill(0)
-      text("O: " + yScore, 500, 190);
+      text("O Wins: " + yScore, 500, 190);
     }
     else{
       fill(0)
-      text("X: " + xScore, 500, 90);
+      text("X Wins: " + xScore, 500, 90);
       fill(255,0,0)
-      text("O: " + yScore, 500, 190);
+      text("O Wins: " + yScore, 500, 190);
 
     }
    
@@ -49,6 +49,7 @@ function draw() {
 }
 
 function mouseClicked() {
+  console.log(game[0] == 1)
   fill(0,0,0)
   if(mouseX > 25 && mouseX < 125 && mouseY > 25 && mouseY < 125){
     game.splice(0, 1, userTurn)
@@ -61,7 +62,7 @@ function mouseClicked() {
     else {
       userTurn = 'X'
     }
-    if(checkWinner()){
+    if(checkWinner() == true){
         textSize(50);
         if(userTurn == 'X'){
             text("O is the winner!!!",25, 400);
@@ -74,6 +75,10 @@ function mouseClicked() {
         setTimeout(reset,1500);
         
       }
+    else if(checkWinner() == 'Tie'){
+        text("It is a Tie",25, 400);
+        setTimeout(reset,1500);
+    }
     console.log(game)
     console.log(checkWinner())
   }
@@ -89,7 +94,7 @@ function mouseClicked() {
     else {
       userTurn = 'X'
     }
-    if(checkWinner()){
+    if(checkWinner() == true){
       textSize(50);
       if(userTurn == 'X'){
           text("O is the winner!!!",25, 400);
@@ -101,6 +106,10 @@ function mouseClicked() {
         }
       setTimeout(reset,1500);
       
+    }
+    else if(checkWinner() == 'Tie'){
+        text("It is a Tie",25, 400);
+        setTimeout(reset,1500);
     }
     console.log(checkWinner())
   }
@@ -115,7 +124,7 @@ function mouseClicked() {
     else {
       userTurn = 'X'
     }
-    if(checkWinner()){
+    if(checkWinner() == true){
       textSize(50);
       if(userTurn == 'X'){
           text("O is the winner!!!",25, 400);
@@ -127,6 +136,10 @@ function mouseClicked() {
         }
       setTimeout(reset,1500);
       
+    }
+    else if(checkWinner() == 'Tie'){
+        text("It is a Tie",25, 400);
+        setTimeout(reset,1500);
     }
     console.log(checkWinner())
   }
@@ -143,7 +156,7 @@ function mouseClicked() {
     else {
       userTurn = 'X'
     }
-    if(checkWinner()){
+    if(checkWinner() == true){
       textSize(50);
       if(userTurn == 'X'){
           text("O is the winner!!!",25, 400);
@@ -155,6 +168,10 @@ function mouseClicked() {
         }
       setTimeout(reset,1500);
       
+    }
+    else if(checkWinner() == 'Tie'){
+        text("It is a Tie",25, 400);
+        setTimeout(reset,1500);
     }
     console.log(checkWinner())
   }
@@ -170,7 +187,7 @@ function mouseClicked() {
     else {
       userTurn = 'X'
     }
-    if(checkWinner()){
+    if(checkWinner() == true){
       textSize(50);
       if(userTurn == 'X'){
           text("O is the winner!!!",25, 400);
@@ -182,6 +199,10 @@ function mouseClicked() {
         }
       setTimeout(reset,1500);
       
+    }
+    else if(checkWinner() == 'Tie'){
+        text("It is a Tie",25, 400);
+        setTimeout(reset,1500);
     }
     console.log(checkWinner())
   }
@@ -197,7 +218,7 @@ function mouseClicked() {
     else {
       userTurn = 'X'
     }
-    if(checkWinner()){
+    if(checkWinner() == true){
       textSize(50);
       if(userTurn == 'X'){
           text("O is the winner!!!",25, 400);
@@ -209,6 +230,10 @@ function mouseClicked() {
         }
       setTimeout(reset,1500);
       
+    }
+    else if(checkWinner() == 'Tie'){
+        text("It is a Tie",25, 400);
+        setTimeout(reset,1500);
     }
     console.log(checkWinner())
   }
@@ -224,7 +249,7 @@ function mouseClicked() {
     else {
       userTurn = 'X'
     }
-    if(checkWinner()){
+    if(checkWinner() == true){
       textSize(50);
       if(userTurn == 'X'){
           text("O is the winner!!!",25, 400);
@@ -236,6 +261,10 @@ function mouseClicked() {
         }
       setTimeout(reset,1500);
       
+    }
+    else if(checkWinner() == 'Tie'){
+        text("It is a Tie",25, 400);
+        setTimeout(reset,1500);
     }
     console.log(checkWinner())
   }
@@ -250,7 +279,7 @@ function mouseClicked() {
     else {
       userTurn = 'X'
     }
-    if(checkWinner()){
+    if(checkWinner() == true){
       textSize(50);
       if(userTurn == 'X'){
           text("O is the winner!!!",25, 400);
@@ -262,6 +291,10 @@ function mouseClicked() {
         }
       setTimeout(reset,1500);
       
+    }
+    else if(checkWinner() == 'Tie'){
+        text("It is a Tie",25, 400);
+        setTimeout(reset,1500);
     }
     console.log(checkWinner())
   }
@@ -276,7 +309,7 @@ function mouseClicked() {
     else {
       userTurn = 'X'
     }
-    if(checkWinner()){
+    if(checkWinner() == true){
       textSize(50);
       if(userTurn == 'X'){
           text("O is the winner!!!",25, 400);
@@ -289,10 +322,14 @@ function mouseClicked() {
       setTimeout(reset,1500);
       
     }
+    else if(checkWinner() == 'Tie'){
+        text("It is a Tie",25, 400);
+        setTimeout(reset,1500);
+    }
   }
   console.log(game)
-  console.log("X: " + xScore)
-  console.log("Y: " + yScore)
+  console.log("X Wins: " + xScore)
+  console.log("Y Wins: " + yScore)
   
 }
 
@@ -330,9 +367,16 @@ function checkWinner() {
     winner = game[6]
     return true
   }
-  if(game.includes(1) == true){
-    winner = "Tie"
-    return false
+  if(game[0] != 1 && 
+     game[1] != 2 && 
+     game[2] != 3 && 
+     game[3] != 4 && 
+     game[4] != 5 && 
+     game[5] != 6 && 
+     game[6] != 7 && 
+     game[7] != 8 && 
+     game[8] != 9) {
+    return 'Tie'
   }
   
   else{
@@ -358,9 +402,19 @@ function reset(){
         rect(125, 225, 100, 100);
         rect(225, 225, 100, 100);
 
-        text("X: " + xScore, 500, 90);
-        text("O: " + yScore, 500, 190);
+        text("X Wins: " + xScore, 500, 90);
+        text("O Wins: " + yScore, 500, 190);
         game = [1,2,3,4,5,6,7,8,9]
          
   
+}
+
+function inArray(element,array){
+    var count = array.length;
+    for(var i=0;i<count;i++){
+        if(array[i] == element){
+          return true;
+        }
+    }
+    return false;
 }
