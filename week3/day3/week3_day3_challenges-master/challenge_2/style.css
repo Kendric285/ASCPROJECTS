@@ -1,0 +1,48 @@
+body {
+    background-image: url("images/confetti.gif");
+    font-family: Helvetica;
+}
+
+h1 {
+    background-color: rgba(255, 255, 255, 0.5);
+    font-size: 300%;
+    padding: 20px;
+}
+
+img {
+    border: 5px solid #FFCB05;
+    padding: 10px;
+}
+
+ul {
+    list-style-image: url('images/pikachu.png');
+}
+
+.the_divs {
+    font-weight: bold;
+}
+
+#one {
+    text-align: center;
+}
+
+#two {
+    background-color: rgba(255, 255, 255, 0.5);
+    font-size: 150%;
+    padding: 20px;
+}
+
+#three {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+}
+
+#yellow {
+    color: #FFCB05;
+}
+
+#raichu, #ash, #team_rocket {
+    height: 75px;
+    border: none;
+    padding-bottom: 0px;
+}

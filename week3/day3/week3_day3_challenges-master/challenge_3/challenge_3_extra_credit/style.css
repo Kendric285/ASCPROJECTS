@@ -1,0 +1,14 @@
+h1 {
+	font-family: Helvetica;
+	text-align: center;
+}
+
+img {
+	width: 100px;
+}
+
+#big_div {
+	margin: auto;
+	border: 5px solid black;
+	width: 516px;
+}
