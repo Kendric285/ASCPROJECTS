@@ -1,0 +1,37 @@
+html{
+    background-color: gray;
+}
+#nav_bar #top_nav{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    color: white;
+    
+}
+
+#nav_bar #sub_nav{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    color: white;
+    background-color: black;
+    
+}
+
+#sub_nav div:hover{
+    border: 5px solid white;
+}
+
+#boxes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.boxes_in_class{
+    background-color: white;
+    width: 30%;
+    text-align: center;
+}
+#nav_bar p{
+    margin: 2px;
+}

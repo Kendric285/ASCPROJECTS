@@ -1,30 +1,37 @@
-bod {
-    background-color: black
-    color: white
-    font-familia: Helveticalalala;
-    font-size: 22px
+body {
+    background-color: black;
+   
+    font-family: Helveticalalala;
+    font-size: 22p;
     padding: 20px;
 }
 
 h1 {
-    colour: 255, 203, 5; /* rgb value */
-    textalign: center;
+    color: rgb(250,204,2); /* rgb value */
+    text-align: center;
 }
 
-#big_div 
-    border: 3px solid 2E549B; /* hex value */
+.big_div {
+    display: flex;
+    order: 0;
+    border: 10px solid rgb(250,204,2); /* hex value */
     margin: 30px;
-    pading: 20px;
+    padding: 20px;
+    
 }
-
-pokemon_name {
-    text-align: center
+p{
+    color: white;
+}
+.pokemon_name {
+    text-align: center;
     font-size: 150;
-    font: bold
+    font: bold;
     margin: 10px;
-
+}
 .sub_div {
     display: flex;
+    order: -1;
+    
 }
 
 img {
@@ -32,6 +39,7 @@ img {
     padding-right: 50px;
 }
 
-special {
-    font-wieght: cold
+#special {
+    font-weight: cold;
     color: 255, 203, 5; /* rgb value */
+}
