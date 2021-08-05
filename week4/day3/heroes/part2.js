@@ -5,7 +5,8 @@
 // 1. Create a form that has an input for the hero's name, secret identity,
 // powers, team, and their saying. Give the form a button that says "Add Hero" and append it to the #form-box div
 let userHeroes = []
-
+let div = document.createElement("div")
+div.id = "heroes"
 let form = document.getElementById("form-box")
 
 let button = document.createElement("button")
@@ -43,6 +44,8 @@ form.appendChild(powers)
 form.appendChild(team)
 form.appendChild(saying)
 form.appendChild(button)
+form.appendChild(div)
+
 
 
 
@@ -63,13 +66,48 @@ button.onclick = function(){
         }
     )
 
-    for(i in heroes){
-        console.log(userHeroes[i].name)
+    // for(i in userHeroes){
+    //     console.log(userHeroes[i].name)
+    // }
+
+    for(i in userHeroes){
+        let heroList = document.getElementById("heroes")
+        heroList.innerHTML = ""
+    
+        let name = document.createElement("h2")
+        name.innerText = userHeroes[i].name
+    
+        let team = document.createElement("p")
+        team.innerText = "Team: " + userHeroes[i].team
+    
+        let identity = document.createElement("p")
+        identity.innerText = "Secret Identity: " + userHeroes[i].secretIdentity
+        
+        let list = document.createElement("ul")
+    
+        let powers = document.createElement("h3")
+        powers.innerText = "Powers: "
+        let power = document.createElement("li")
+        power.innerText = userHeroes[i].powers
+    
+        list.appendChild(powers)
+        list.appendChild(power)
+    
+        let heroDiv = document.createElement("div")
+        heroList.appendChild(heroDiv)
+        heroDiv.appendChild(name)
+        heroDiv.appendChild(team)
+        heroDiv.appendChild(identity)
+        heroDiv.appendChild(list)
+        
+        
+
     }
-
-    
-
-    
+    nameInput.value = ""
+    secretName.value = ""
+    powers.value = ""
+    team.value = ""
+    saying.value = ""
 
 
 
